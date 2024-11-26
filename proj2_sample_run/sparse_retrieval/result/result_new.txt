@@ -1,0 +1,531 @@
+(base) root@6587faa5429d:/storage/WSM_Project2/proj2_sample_run/sparse_retrieval# ./run.sh 
+rm: cannot remove 'data/collection/*': No such file or directory
+rm: cannot remove 'indexes/collection/noStemmer/*': No such file or directory
+rm: cannot remove 'runs/*': No such file or directory
+WARNING: Using incubator modules: jdk.incubator.vector
+2024-11-26 09:38:29,035 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:205) - Setting log level to INFO
+2024-11-26 09:38:29,038 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:208) - ============ Loading Index Configuration ============
+2024-11-26 09:38:29,039 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:209) - AbstractIndexer settings:
+2024-11-26 09:38:29,039 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:210) -  + DocumentCollection path: ../data/WT2G
+2024-11-26 09:38:29,039 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:211) -  + CollectionClass: TrecwebCollection
+2024-11-26 09:38:29,040 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:212) -  + Index path: indexes/collection/noStemmer
+2024-11-26 09:38:29,040 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:213) -  + Threads: 6
+2024-11-26 09:38:29,041 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:214) -  + Optimize (merge segments)? false
+Nov 26, 2024 9:38:29 AM org.apache.lucene.store.MemorySegmentIndexInputProvider <init>
+INFO: Using MemorySegmentIndexInput with Java 21; to disable start with -Dorg.apache.lucene.store.MMapDirectory.enableMemorySegments=false
+2024-11-26 09:38:29,064 INFO  [main] index.IndexCollection (IndexCollection.java:246) - Using DefaultEnglishAnalyzer
+2024-11-26 09:38:29,064 INFO  [main] index.IndexCollection (IndexCollection.java:247) - Stemmer: none
+2024-11-26 09:38:29,065 INFO  [main] index.IndexCollection (IndexCollection.java:248) - Keep stopwords? false
+2024-11-26 09:38:29,065 INFO  [main] index.IndexCollection (IndexCollection.java:249) - Stopwords file: null
+2024-11-26 09:38:29,135 INFO  [main] index.IndexCollection (IndexCollection.java:197) - IndexCollection settings:
+2024-11-26 09:38:29,135 INFO  [main] index.IndexCollection (IndexCollection.java:198) -  + Generator: DefaultLuceneDocumentGenerator
+2024-11-26 09:38:29,135 INFO  [main] index.IndexCollection (IndexCollection.java:199) -  + Language: en
+2024-11-26 09:38:29,135 INFO  [main] index.IndexCollection (IndexCollection.java:200) -  + Stemmer: none
+2024-11-26 09:38:29,136 INFO  [main] index.IndexCollection (IndexCollection.java:201) -  + Keep stopwords? false
+2024-11-26 09:38:29,136 INFO  [main] index.IndexCollection (IndexCollection.java:202) -  + Stopwords: null
+2024-11-26 09:38:29,136 INFO  [main] index.IndexCollection (IndexCollection.java:203) -  + Store positions? true
+2024-11-26 09:38:29,136 INFO  [main] index.IndexCollection (IndexCollection.java:204) -  + Store docvectors? true
+2024-11-26 09:38:29,137 INFO  [main] index.IndexCollection (IndexCollection.java:205) -  + Store document "contents" field? false
+2024-11-26 09:38:29,137 INFO  [main] index.IndexCollection (IndexCollection.java:206) -  + Store document "raw" field? true
+2024-11-26 09:38:29,137 INFO  [main] index.IndexCollection (IndexCollection.java:207) -  + Additional fields to index: []
+2024-11-26 09:38:29,137 INFO  [main] index.IndexCollection (IndexCollection.java:208) -  + Whitelist: null
+2024-11-26 09:38:29,137 INFO  [main] index.IndexCollection (IndexCollection.java:209) -  + Pretokenized?: false
+2024-11-26 09:38:29,138 INFO  [main] index.IndexCollection (IndexCollection.java:210) -  + Codec: Lucene99
+2024-11-26 09:38:29,138 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:238) - ============ Indexing Collection ============
+2024-11-26 09:38:29,535 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:247) - Thread pool with 6 threads initialized.
+2024-11-26 09:38:29,536 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:248) - 1,081 files found in ../data/WT2G
+2024-11-26 09:38:29,536 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:249) - Starting to index...
+2024-11-26 09:39:39,488 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:307) - Indexing Complete! 246,772 documents indexed
+2024-11-26 09:39:39,488 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:308) - ============ Final Counter Values ============
+2024-11-26 09:39:39,488 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:309) - indexed:          246,772
+2024-11-26 09:39:39,489 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:310) - unindexable:            0
+2024-11-26 09:39:39,489 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:311) - empty:                717
+2024-11-26 09:39:39,489 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:312) - skipped:                0
+2024-11-26 09:39:39,489 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:313) - errors:                 0
+2024-11-26 09:39:39,491 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:316) - Total 246,772 documents indexed in 00:01:10
+WARNING: Using incubator modules: jdk.incubator.vector
+/root/miniconda3/lib/python3.12/site-packages/torch/cuda/__init__.py:128: UserWarning: CUDA initialization: Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 500: named symbol not found (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:108.)
+  return torch._C._cuda_getDeviceCount() > 0
+Nov 26, 2024 9:39:42 AM org.apache.lucene.store.MemorySegmentIndexInputProvider <init>
+INFO: Using MemorySegmentIndexInput with Java 21; to disable start with -Dorg.apache.lucene.store.MMapDirectory.enableMemorySegments=false
+Do bm25 search...
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 40/40 [00:20<00:00,  1.99it/s]
+BM25 result on 40 queries
+
+Query (Num):       39
+Total number of documents over all queries
+    Retrieved:    27999
+    Relevant:      1825
+    Rel_ret:        745
+Interpolated Recall - Precision Averages:
+    at 0.00       0.4110
+    at 0.10       0.2836
+    at 0.20       0.1854
+    at 0.30       0.1113
+    at 0.40       0.0946
+    at 0.50       0.0847
+    at 0.60       0.0332
+    at 0.70       0.0133
+    at 0.80       0.0084
+    at 0.90       0.0073
+    at 1.00       0.0044
+Average precision (non-interpolated) for all rel docs(averaged over queries)
+                  0.0923
+Precision:
+  At    5 docs:   0.2154
+  At   10 docs:   0.1974
+  At   15 docs:   0.1675
+  At   20 docs:   0.1487
+  At   30 docs:   0.1274
+  At  100 docs:   0.0703
+  At  200 docs:   0.0521
+  At  500 docs:   0.0318
+  At 1000 docs:   0.0191
+R-Precision (precision after R (= num_rel for a query) docs retrieved):
+    Exact:        0.1270
+WARNING: Using incubator modules: jdk.incubator.vector
+/root/miniconda3/lib/python3.12/site-packages/torch/cuda/__init__.py:128: UserWarning: CUDA initialization: Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 500: named symbol not found (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:108.)
+  return torch._C._cuda_getDeviceCount() > 0
+Nov 26, 2024 9:40:06 AM org.apache.lucene.store.MemorySegmentIndexInputProvider <init>
+INFO: Using MemorySegmentIndexInput with Java 21; to disable start with -Dorg.apache.lucene.store.MMapDirectory.enableMemorySegments=false
+Do lmLaplace search...
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 40/40 [00:22<00:00,  1.80it/s]
+lmLaplace result on 40 queries
+
+Query (Num):       39
+Total number of documents over all queries
+    Retrieved:    27999
+    Relevant:      1825
+    Rel_ret:        814
+Interpolated Recall - Precision Averages:
+    at 0.00       0.3759
+    at 0.10       0.3002
+    at 0.20       0.2354
+    at 0.30       0.1619
+    at 0.40       0.1306
+    at 0.50       0.1211
+    at 0.60       0.0693
+    at 0.70       0.0488
+    at 0.80       0.0332
+    at 0.90       0.0290
+    at 1.00       0.0059
+Average precision (non-interpolated) for all rel docs(averaged over queries)
+                  0.1214
+Precision:
+  At    5 docs:   0.1949
+  At   10 docs:   0.1769
+  At   15 docs:   0.1641
+  At   20 docs:   0.1500
+  At   30 docs:   0.1299
+  At  100 docs:   0.0815
+  At  200 docs:   0.0600
+  At  500 docs:   0.0353
+  At 1000 docs:   0.0209
+R-Precision (precision after R (= num_rel for a query) docs retrieved):
+    Exact:        0.1434
+WARNING: Using incubator modules: jdk.incubator.vector
+/root/miniconda3/lib/python3.12/site-packages/torch/cuda/__init__.py:128: UserWarning: CUDA initialization: Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 500: named symbol not found (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:108.)
+  return torch._C._cuda_getDeviceCount() > 0
+Nov 26, 2024 9:40:32 AM org.apache.lucene.store.MemorySegmentIndexInputProvider <init>
+INFO: Using MemorySegmentIndexInput with Java 21; to disable start with -Dorg.apache.lucene.store.MMapDirectory.enableMemorySegments=false
+Do lmJelinekMercer search...
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 40/40 [00:20<00:00,  1.94it/s]
+BM25 result on 40 queries
+
+Query (Num):       39
+Total number of documents over all queries
+    Retrieved:    27999
+    Relevant:      1825
+    Rel_ret:        744
+Interpolated Recall - Precision Averages:
+    at 0.00       0.3078
+    at 0.10       0.2315
+    at 0.20       0.1725
+    at 0.30       0.1113
+    at 0.40       0.0878
+    at 0.50       0.0759
+    at 0.60       0.0519
+    at 0.70       0.0378
+    at 0.80       0.0312
+    at 0.90       0.0277
+    at 1.00       0.0060
+Average precision (non-interpolated) for all rel docs(averaged over queries)
+                  0.0884
+Precision:
+  At    5 docs:   0.1692
+  At   10 docs:   0.1462
+  At   15 docs:   0.1419
+  At   20 docs:   0.1256
+  At   30 docs:   0.1077
+  At  100 docs:   0.0631
+  At  200 docs:   0.0473
+  At  500 docs:   0.0312
+  At 1000 docs:   0.0191
+R-Precision (precision after R (= num_rel for a query) docs retrieved):
+    Exact:        0.1064
+(base) root@6587faa5429d:/storage/WSM_Project2/proj2_sample_run/sparse_retrieval# ./run.sh 
+rm: cannot remove 'data/collection/*': No such file or directory
+WARNING: Using incubator modules: jdk.incubator.vector
+2024-11-26 09:41:37,217 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:205) - Setting log level to INFO
+2024-11-26 09:41:37,219 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:208) - ============ Loading Index Configuration ============
+2024-11-26 09:41:37,220 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:209) - AbstractIndexer settings:
+2024-11-26 09:41:37,220 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:210) -  + DocumentCollection path: ../data/WT2G
+2024-11-26 09:41:37,220 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:211) -  + CollectionClass: TrecwebCollection
+2024-11-26 09:41:37,220 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:212) -  + Index path: indexes/collection/Stemmed
+2024-11-26 09:41:37,221 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:213) -  + Threads: 6
+2024-11-26 09:41:37,221 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:214) -  + Optimize (merge segments)? false
+Nov 26, 2024 9:41:37 AM org.apache.lucene.store.MemorySegmentIndexInputProvider <init>
+INFO: Using MemorySegmentIndexInput with Java 21; to disable start with -Dorg.apache.lucene.store.MMapDirectory.enableMemorySegments=false
+2024-11-26 09:41:37,239 INFO  [main] index.IndexCollection (IndexCollection.java:246) - Using DefaultEnglishAnalyzer
+2024-11-26 09:41:37,239 INFO  [main] index.IndexCollection (IndexCollection.java:247) - Stemmer: porter
+2024-11-26 09:41:37,239 INFO  [main] index.IndexCollection (IndexCollection.java:248) - Keep stopwords? false
+2024-11-26 09:41:37,240 INFO  [main] index.IndexCollection (IndexCollection.java:249) - Stopwords file: null
+2024-11-26 09:41:37,309 INFO  [main] index.IndexCollection (IndexCollection.java:197) - IndexCollection settings:
+2024-11-26 09:41:37,309 INFO  [main] index.IndexCollection (IndexCollection.java:198) -  + Generator: DefaultLuceneDocumentGenerator
+2024-11-26 09:41:37,309 INFO  [main] index.IndexCollection (IndexCollection.java:199) -  + Language: en
+2024-11-26 09:41:37,309 INFO  [main] index.IndexCollection (IndexCollection.java:200) -  + Stemmer: porter
+2024-11-26 09:41:37,309 INFO  [main] index.IndexCollection (IndexCollection.java:201) -  + Keep stopwords? false
+2024-11-26 09:41:37,310 INFO  [main] index.IndexCollection (IndexCollection.java:202) -  + Stopwords: null
+2024-11-26 09:41:37,310 INFO  [main] index.IndexCollection (IndexCollection.java:203) -  + Store positions? true
+2024-11-26 09:41:37,310 INFO  [main] index.IndexCollection (IndexCollection.java:204) -  + Store docvectors? true
+2024-11-26 09:41:37,310 INFO  [main] index.IndexCollection (IndexCollection.java:205) -  + Store document "contents" field? false
+2024-11-26 09:41:37,311 INFO  [main] index.IndexCollection (IndexCollection.java:206) -  + Store document "raw" field? true
+2024-11-26 09:41:37,311 INFO  [main] index.IndexCollection (IndexCollection.java:207) -  + Additional fields to index: []
+2024-11-26 09:41:37,311 INFO  [main] index.IndexCollection (IndexCollection.java:208) -  + Whitelist: null
+2024-11-26 09:41:37,311 INFO  [main] index.IndexCollection (IndexCollection.java:209) -  + Pretokenized?: false
+2024-11-26 09:41:37,311 INFO  [main] index.IndexCollection (IndexCollection.java:210) -  + Codec: Lucene99
+2024-11-26 09:41:37,312 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:238) - ============ Indexing Collection ============
+2024-11-26 09:41:37,703 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:247) - Thread pool with 6 threads initialized.
+2024-11-26 09:41:37,703 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:248) - 1,081 files found in ../data/WT2G
+2024-11-26 09:41:37,704 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:249) - Starting to index...
+2024-11-26 09:42:43,056 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:307) - Indexing Complete! 246,772 documents indexed
+2024-11-26 09:42:43,056 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:308) - ============ Final Counter Values ============
+2024-11-26 09:42:43,057 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:309) - indexed:          246,772
+2024-11-26 09:42:43,057 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:310) - unindexable:            0
+2024-11-26 09:42:43,057 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:311) - empty:                717
+2024-11-26 09:42:43,057 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:312) - skipped:                0
+2024-11-26 09:42:43,057 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:313) - errors:                 0
+2024-11-26 09:42:43,060 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:316) - Total 246,772 documents indexed in 00:01:05
+WARNING: Using incubator modules: jdk.incubator.vector
+/root/miniconda3/lib/python3.12/site-packages/torch/cuda/__init__.py:128: UserWarning: CUDA initialization: Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 500: named symbol not found (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:108.)
+  return torch._C._cuda_getDeviceCount() > 0
+Nov 26, 2024 9:42:46 AM org.apache.lucene.store.MemorySegmentIndexInputProvider <init>
+INFO: Using MemorySegmentIndexInput with Java 21; to disable start with -Dorg.apache.lucene.store.MMapDirectory.enableMemorySegments=false
+Do bm25 search...
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 40/40 [00:22<00:00,  1.76it/s]
+BM25 result on 40 queries
+
+Query (Num):       40
+Total number of documents over all queries
+    Retrieved:    38870
+    Relevant:      1916
+    Rel_ret:       1406
+Interpolated Recall - Precision Averages:
+    at 0.00       0.7052
+    at 0.10       0.5615
+    at 0.20       0.4400
+    at 0.30       0.3406
+    at 0.40       0.2877
+    at 0.50       0.2391
+    at 0.60       0.1891
+    at 0.70       0.1238
+    at 0.80       0.0447
+    at 0.90       0.0173
+    at 1.00       0.0062
+Average precision (non-interpolated) for all rel docs(averaged over queries)
+                  0.2405
+Precision:
+  At    5 docs:   0.4100
+  At   10 docs:   0.4075
+  At   15 docs:   0.3850
+  At   20 docs:   0.3463
+  At   30 docs:   0.2967
+  At  100 docs:   0.1707
+  At  200 docs:   0.1170
+  At  500 docs:   0.0614
+  At 1000 docs:   0.0352
+R-Precision (precision after R (= num_rel for a query) docs retrieved):
+    Exact:        0.3003
+WARNING: Using incubator modules: jdk.incubator.vector
+/root/miniconda3/lib/python3.12/site-packages/torch/cuda/__init__.py:128: UserWarning: CUDA initialization: Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 500: named symbol not found (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:108.)
+  return torch._C._cuda_getDeviceCount() > 0
+Nov 26, 2024 9:43:12 AM org.apache.lucene.store.MemorySegmentIndexInputProvider <init>
+INFO: Using MemorySegmentIndexInput with Java 21; to disable start with -Dorg.apache.lucene.store.MMapDirectory.enableMemorySegments=false
+Do lmLaplace search...
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 40/40 [00:25<00:00,  1.57it/s]
+lmLaplace result on 40 queries
+
+Query (Num):       40
+Total number of documents over all queries
+    Retrieved:    38870
+    Relevant:      1916
+    Rel_ret:       1557
+Interpolated Recall - Precision Averages:
+    at 0.00       0.7867
+    at 0.10       0.6247
+    at 0.20       0.5335
+    at 0.30       0.4350
+    at 0.40       0.3747
+    at 0.50       0.3250
+    at 0.60       0.2475
+    at 0.70       0.1959
+    at 0.80       0.1401
+    at 0.90       0.0924
+    at 1.00       0.0421
+Average precision (non-interpolated) for all rel docs(averaged over queries)
+                  0.3191
+Precision:
+  At    5 docs:   0.5300
+  At   10 docs:   0.4850
+  At   15 docs:   0.4283
+  At   20 docs:   0.3963
+  At   30 docs:   0.3400
+  At  100 docs:   0.2005
+  At  200 docs:   0.1371
+  At  500 docs:   0.0706
+  At 1000 docs:   0.0389
+R-Precision (precision after R (= num_rel for a query) docs retrieved):
+    Exact:        0.3319
+WARNING: Using incubator modules: jdk.incubator.vector
+/root/miniconda3/lib/python3.12/site-packages/torch/cuda/__init__.py:128: UserWarning: CUDA initialization: Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 500: named symbol not found (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:108.)
+  return torch._C._cuda_getDeviceCount() > 0
+Nov 26, 2024 9:43:42 AM org.apache.lucene.store.MemorySegmentIndexInputProvider <init>
+INFO: Using MemorySegmentIndexInput with Java 21; to disable start with -Dorg.apache.lucene.store.MMapDirectory.enableMemorySegments=false
+Do lmJelinekMercer search...
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 40/40 [00:23<00:00,  1.71it/s]
+BM25 result on 40 queries
+
+Query (Num):       40
+Total number of documents over all queries
+    Retrieved:    38870
+    Relevant:      1916
+    Rel_ret:       1470
+Interpolated Recall - Precision Averages:
+    at 0.00       0.6021
+    at 0.10       0.4979
+    at 0.20       0.4091
+    at 0.30       0.3208
+    at 0.40       0.2819
+    at 0.50       0.2421
+    at 0.60       0.1901
+    at 0.70       0.1559
+    at 0.80       0.1053
+    at 0.90       0.0748
+    at 1.00       0.0436
+Average precision (non-interpolated) for all rel docs(averaged over queries)
+                  0.2389
+Precision:
+  At    5 docs:   0.3350
+  At   10 docs:   0.3250
+  At   15 docs:   0.3267
+  At   20 docs:   0.3087
+  At   30 docs:   0.2592
+  At  100 docs:   0.1713
+  At  200 docs:   0.1246
+  At  500 docs:   0.0650
+  At 1000 docs:   0.0367
+R-Precision (precision after R (= num_rel for a query) docs retrieved):
+    Exact:        0.2589
+
+
+(base) root@6587faa5429d:/storage/WSM_Project2/proj2_sample_run/sparse_retrieval# ./run.sh 
+rm: cannot remove 'data/collection/*': No such file or directory
+rm: cannot remove 'indexes/collection/noStemmer/*': No such file or directory
+WARNING: Using incubator modules: jdk.incubator.vector
+2024-11-26 11:33:31,186 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:205) - Setting log level to INFO
+2024-11-26 11:33:31,190 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:208) - ============ Loading Index Configuration ============
+2024-11-26 11:33:31,190 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:209) - AbstractIndexer settings:
+2024-11-26 11:33:31,191 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:210) -  + DocumentCollection path: ../data/WT2G
+2024-11-26 11:33:31,191 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:211) -  + CollectionClass: TrecwebCollection
+2024-11-26 11:33:31,191 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:212) -  + Index path: indexes/collection/Stemmed
+2024-11-26 11:33:31,192 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:213) -  + Threads: 6
+2024-11-26 11:33:31,192 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:214) -  + Optimize (merge segments)? false
+Nov 26, 2024 11:33:31 AM org.apache.lucene.store.MemorySegmentIndexInputProvider <init>
+INFO: Using MemorySegmentIndexInput with Java 21; to disable start with -Dorg.apache.lucene.store.MMapDirectory.enableMemorySegments=false
+2024-11-26 11:33:31,215 INFO  [main] index.IndexCollection (IndexCollection.java:246) - Using DefaultEnglishAnalyzer
+2024-11-26 11:33:31,216 INFO  [main] index.IndexCollection (IndexCollection.java:247) - Stemmer: porter
+2024-11-26 11:33:31,217 INFO  [main] index.IndexCollection (IndexCollection.java:248) - Keep stopwords? false
+2024-11-26 11:33:31,218 INFO  [main] index.IndexCollection (IndexCollection.java:249) - Stopwords file: null
+2024-11-26 11:33:31,294 INFO  [main] index.IndexCollection (IndexCollection.java:197) - IndexCollection settings:
+2024-11-26 11:33:31,294 INFO  [main] index.IndexCollection (IndexCollection.java:198) -  + Generator: DefaultLuceneDocumentGenerator
+2024-11-26 11:33:31,294 INFO  [main] index.IndexCollection (IndexCollection.java:199) -  + Language: en
+2024-11-26 11:33:31,295 INFO  [main] index.IndexCollection (IndexCollection.java:200) -  + Stemmer: porter
+2024-11-26 11:33:31,295 INFO  [main] index.IndexCollection (IndexCollection.java:201) -  + Keep stopwords? false
+2024-11-26 11:33:31,295 INFO  [main] index.IndexCollection (IndexCollection.java:202) -  + Stopwords: null
+2024-11-26 11:33:31,296 INFO  [main] index.IndexCollection (IndexCollection.java:203) -  + Store positions? true
+2024-11-26 11:33:31,296 INFO  [main] index.IndexCollection (IndexCollection.java:204) -  + Store docvectors? true
+2024-11-26 11:33:31,296 INFO  [main] index.IndexCollection (IndexCollection.java:205) -  + Store document "contents" field? false
+2024-11-26 11:33:31,296 INFO  [main] index.IndexCollection (IndexCollection.java:206) -  + Store document "raw" field? true
+2024-11-26 11:33:31,296 INFO  [main] index.IndexCollection (IndexCollection.java:207) -  + Additional fields to index: []
+2024-11-26 11:33:31,297 INFO  [main] index.IndexCollection (IndexCollection.java:208) -  + Whitelist: null
+2024-11-26 11:33:31,297 INFO  [main] index.IndexCollection (IndexCollection.java:209) -  + Pretokenized?: false
+2024-11-26 11:33:31,297 INFO  [main] index.IndexCollection (IndexCollection.java:210) -  + Codec: Lucene99
+2024-11-26 11:33:31,297 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:238) - ============ Indexing Collection ============
+2024-11-26 11:33:31,677 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:247) - Thread pool with 6 threads initialized.
+2024-11-26 11:33:31,677 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:248) - 1,081 files found in ../data/WT2G
+2024-11-26 11:33:31,677 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:249) - Starting to index...
+2024-11-26 11:34:36,150 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:307) - Indexing Complete! 246,772 documents indexed
+2024-11-26 11:34:36,151 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:308) - ============ Final Counter Values ============
+2024-11-26 11:34:36,151 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:309) - indexed:          246,772
+2024-11-26 11:34:36,151 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:310) - unindexable:            0
+2024-11-26 11:34:36,152 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:311) - empty:                717
+2024-11-26 11:34:36,152 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:312) - skipped:                0
+2024-11-26 11:34:36,152 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:313) - errors:                 0
+2024-11-26 11:34:36,154 INFO  [main] index.AbstractIndexer (AbstractIndexer.java:316) - Total 246,772 documents indexed in 00:01:04
+WARNING: Using incubator modules: jdk.incubator.vector
+/root/miniconda3/lib/python3.12/site-packages/torch/cuda/__init__.py:128: UserWarning: CUDA initialization: Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 500: named symbol not found (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:108.)
+  return torch._C._cuda_getDeviceCount() > 0
+Nov 26, 2024 11:34:39 AM org.apache.lucene.store.MemorySegmentIndexInputProvider <init>
+INFO: Using MemorySegmentIndexInput with Java 21; to disable start with -Dorg.apache.lucene.store.MMapDirectory.enableMemorySegments=false
+Do bm25 search...
+number of text: 246772
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:40<00:00,  4.00s/it]
+BM25 result on 10 queries
+
+Query (Num):       10
+Total number of documents over all queries
+    Retrieved:    10000
+    Relevant:       363
+    Rel_ret:        258
+Interpolated Recall - Precision Averages:
+    at 0.00       0.7328
+    at 0.10       0.5318
+    at 0.20       0.4824
+    at 0.30       0.4085
+    at 0.40       0.3297
+    at 0.50       0.2665
+    at 0.60       0.1861
+    at 0.70       0.1194
+    at 0.80       0.0576
+    at 0.90       0.0066
+    at 1.00       0.0029
+Average precision (non-interpolated) for all rel docs(averaged over queries)
+                  0.2662
+Precision:
+  At    5 docs:   0.4600
+  At   10 docs:   0.4300
+  At   15 docs:   0.4067
+  At   20 docs:   0.3950
+  At   30 docs:   0.3300
+  At  100 docs:   0.1810
+  At  200 docs:   0.1045
+  At  500 docs:   0.0464
+  At 1000 docs:   0.0258
+R-Precision (precision after R (= num_rel for a query) docs retrieved):
+    Exact:        0.3049
+WARNING: Using incubator modules: jdk.incubator.vector
+/root/miniconda3/lib/python3.12/site-packages/torch/cuda/__init__.py:128: UserWarning: CUDA initialization: Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 500: named symbol not found (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:108.)
+  return torch._C._cuda_getDeviceCount() > 0
+Nov 26, 2024 11:35:23 AM org.apache.lucene.store.MemorySegmentIndexInputProvider <init>
+INFO: Using MemorySegmentIndexInput with Java 21; to disable start with -Dorg.apache.lucene.store.MMapDirectory.enableMemorySegments=false
+Do lmLaplace search...
+number of text: 246772
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:41<00:00,  4.19s/it]
+lmLaplace result on 10 queries
+
+Query (Num):       10
+Total number of documents over all queries
+    Retrieved:    10000
+    Relevant:       363
+    Rel_ret:        314
+Interpolated Recall - Precision Averages:
+    at 0.00       0.6067
+    at 0.10       0.4790
+    at 0.20       0.4272
+    at 0.30       0.3854
+    at 0.40       0.3525
+    at 0.50       0.2840
+    at 0.60       0.2218
+    at 0.70       0.1766
+    at 0.80       0.1599
+    at 0.90       0.1298
+    at 1.00       0.0715
+Average precision (non-interpolated) for all rel docs(averaged over queries)
+                  0.2859
+Precision:
+  At    5 docs:   0.4000
+  At   10 docs:   0.3600
+  At   15 docs:   0.3333
+  At   20 docs:   0.3600
+  At   30 docs:   0.3233
+  At  100 docs:   0.2060
+  At  200 docs:   0.1270
+  At  500 docs:   0.0594
+  At 1000 docs:   0.0314
+R-Precision (precision after R (= num_rel for a query) docs retrieved):
+    Exact:        0.3244
+WARNING: Using incubator modules: jdk.incubator.vector
+/root/miniconda3/lib/python3.12/site-packages/torch/cuda/__init__.py:128: UserWarning: CUDA initialization: Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 500: named symbol not found (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:108.)
+  return torch._C._cuda_getDeviceCount() > 0
+Nov 26, 2024 11:36:10 AM org.apache.lucene.store.MemorySegmentIndexInputProvider <init>
+INFO: Using MemorySegmentIndexInput with Java 21; to disable start with -Dorg.apache.lucene.store.MMapDirectory.enableMemorySegments=false
+Do lmJelinekMercer search...
+number of text: 246772
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:41<00:00,  4.20s/it]
+lmJelinekMercer result on 10 queries
+
+Query (Num):       10
+Total number of documents over all queries
+    Retrieved:    10000
+    Relevant:       363
+    Rel_ret:        317
+Interpolated Recall - Precision Averages:
+    at 0.00       0.6065
+    at 0.10       0.4725
+    at 0.20       0.4144
+    at 0.30       0.3978
+    at 0.40       0.3520
+    at 0.50       0.2856
+    at 0.60       0.2400
+    at 0.70       0.2056
+    at 0.80       0.1765
+    at 0.90       0.1021
+    at 1.00       0.0645
+Average precision (non-interpolated) for all rel docs(averaged over queries)
+                  0.2855
+Precision:
+  At    5 docs:   0.4200
+  At   10 docs:   0.4000
+  At   15 docs:   0.3800
+  At   20 docs:   0.3250
+  At   30 docs:   0.2933
+  At  100 docs:   0.1990
+  At  200 docs:   0.1220
+  At  500 docs:   0.0590
+  At 1000 docs:   0.0317
+R-Precision (precision after R (= num_rel for a query) docs retrieved):
+    Exact:        0.3083
+
+(base) root@6587faa5429d:/storage/WSM_Project2/proj2_sample_run/sparse_retrieval# ./run.sh 
+
+Query (Num):       10
+Total number of documents over all queries
+    Retrieved:    10000
+    Relevant:       363
+    Rel_ret:        311
+Interpolated Recall - Precision Averages:
+    at 0.00       0.5468
+    at 0.10       0.4632
+    at 0.20       0.3929
+    at 0.30       0.3601
+    at 0.40       0.3096
+    at 0.50       0.2270
+    at 0.60       0.1971
+    at 0.70       0.1687
+    at 0.80       0.1480
+    at 0.90       0.1217
+    at 1.00       0.0740
+Average precision (non-interpolated) for all rel docs(averaged over queries)
+                  0.2599
+Precision:
+  At    5 docs:   0.3200
+  At   10 docs:   0.3400
+  At   15 docs:   0.3267
+  At   20 docs:   0.3400
+  At   30 docs:   0.3033
+  At  100 docs:   0.1980
+  At  200 docs:   0.1255
+  At  500 docs:   0.0572
+  At 1000 docs:   0.0311
+R-Precision (precision after R (= num_rel for a query) docs retrieved):
+    Exact:        0.3061
